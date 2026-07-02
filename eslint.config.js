@@ -18,5 +18,20 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+     rules: {
+      'func-style': ['error', 'expression'],
+      '@typescript-eslint/no-unused-vars': 'error',
+      '@typescript-eslint/no-explicit-any': 'error',
+      'no-console': 'warn',
+      'react/function-component-definition': [
+        'error',
+        {
+          namedComponents: 'arrow-function',
+        },
+      ],
+      'prefer-const': 'error',
+      'no-var': 'error',
+
+    },
   },
 ])
