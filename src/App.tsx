@@ -1,12 +1,12 @@
-import './App.css'
+import { RouterProvider } from 'react-router-dom'
 
-function App() {
+import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { router } from '@/app/router/routes'
 
+export const App = () => {
   return (
-    <>
-    <div>Crypto live</div>
-    </>
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   )
 }
-
-export default App
